@@ -23,4 +23,6 @@ public class Pedido {
     private BigDecimal valorTotal;
 
     
+
+    
 }
