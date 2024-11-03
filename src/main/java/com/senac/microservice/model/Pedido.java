@@ -5,23 +5,19 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
-@Entity
 @Data
+@Entity
+@Table(name = "pedidos")
 public class Pedido {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
+    
     private String nomeCliente;
-
-    @Column(nullable = false)
     private BigDecimal valorItens;
-
-    @Column(nullable = false)
     private BigDecimal valorTotal;
-
-    @Column
+    private String statusPagamento;
     private String formaPagamento;
+    
+    // getters e setters
 }

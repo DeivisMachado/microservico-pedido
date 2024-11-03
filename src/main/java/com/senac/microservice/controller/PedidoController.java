@@ -12,17 +12,17 @@ import java.util.List;
 @RestController
 @RequestMapping("/pedidos")
 public class PedidoController {
-
+    
     @Autowired
     private PedidoService pedidoService;
-
+    
     @PostMapping
-    public ResponseEntity<Pedido> criarPedido(@RequestBody Pedido pedido) {
-        return ResponseEntity.ok(pedidoService.criarPedido(pedido));
+    public ResponseEntity<Pedido> criar(@RequestBody Pedido pedido) {
+        return ResponseEntity.ok(pedidoService.criar(pedido));
     }
-
+    
     @GetMapping
-    public ResponseEntity<List<Pedido>> listarPedidos() {
-        return ResponseEntity.ok(pedidoService.listarPedidos());
+    public ResponseEntity<List<Pedido>> listar() {
+        return ResponseEntity.ok(pedidoService.listarTodos());
     }
 }
